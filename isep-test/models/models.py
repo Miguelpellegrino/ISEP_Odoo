@@ -7,7 +7,7 @@ class developer(models.Model):
     @api.multi
     def unlink(self):
         for record in self:
-            res_partner = self.env['res.partner'].search([('id', '=', self.partner_id.id)])
+            res_partner = self.env['res.partner'].search([('id', '=', record.partner_id.id)])
             if record.skill_id:
                 res_partner.write({
                     'skill_ids':[(6, 0, [])]
