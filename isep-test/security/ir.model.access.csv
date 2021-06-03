@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_isep-test_isep-test,isep.developer,model_isep_developer,,1,1,1,1
+access_isep-test_skill_isep-test,isep.skill,model_isep_skill,,1,1,1,1
+access_isep-test_inherit_res_partner_isep-test,res.partner,model_res_partner,,1,1,1,1

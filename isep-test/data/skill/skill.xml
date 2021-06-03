@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="skill_data_1" model="isep.skill">
+            <field name="name">Python</field>    
+        </record>
+        <record id="skill_data_2" model="isep.skill">
+            <field name="name">Java</field>    
+        </record>
+        <record id="skill_data_3" model="isep.skill">
+            <field name="name">PHP</field>    
+        </record>
+        <record id="skill_data_4" model="isep.skill">
+            <field name="name">Kotlin</field>    
+        </record>
+        <record id="skill_data_5" model="isep.skill">
+            <field name="name">Javascript</field>    
+        </record>
+        <record id="skill_data_6" model="isep.skill">
+            <field name="name">CSS</field>    
+        </record>
+        <record id="skill_data_7" model="isep.skill">
+            <field name="name">HTML</field>    
+        </record>
+    </data>
+</odoo>

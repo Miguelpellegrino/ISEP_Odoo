@@ -1,0 +1,60 @@
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="isep-test_list">
+            <field name="name">ISEP-TEST list</field>
+            <field name="model">isep.developer</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="partner_id"/>
+                    <field name="name" force_save="1"/>
+                    <field name="skill_id"/>
+                    <field name="years"/>
+                    <field name="percent"  widget="progressbar"/>
+                    <field name="company_id"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="isep-test_form">
+            <field name="name">isep developer form</field>
+            <field name="model">isep.developer</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group class="col-6">
+                        <field name="partner_id"/>
+                        <field name="company_id"/>
+                        <field name="name" force_save="1"/>
+                    </group>
+
+                    <group class="col-6">
+                        <field name="skill_id" widget="many2many_tags"/>
+                        <field name="years"/>
+                        <field name="percent"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+   
+        <record model="ir.actions.act_window" id="isep-test_action_window">
+            <field name="name">ISEP-TEST window</field>
+            <field name="res_model">isep.developer</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+   
+   
+
+    <!-- Top menu item -->
+    
+        <menuitem name="ISEP-TEST" id="isep-test_menu_root"/>
+   
+    <!-- menu categories -->
+    <!--
+    <menuitem name="Menu 1" id="isep-test.menu_1" parent="isep-test.menu_root"/>
+    <menuitem name="Menu 2" id="isep-test.menu_2" parent="isep-test.menu_root"/>
+    -->
+    <!-- actions -->
+    
+        <menuitem name="developer" id="isep-test_menu_1_list" parent="isep-test_menu_root" action="isep-test_action_window"/>
+   
+    </data>
+</odoo>

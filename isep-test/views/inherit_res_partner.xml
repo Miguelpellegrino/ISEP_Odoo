@@ -1,0 +1,14 @@
+<odoo>
+    <data>
+        <record id="view_print_patent_industry_commerce" model="ir.ui.view">
+            <field name="name">isep res partner</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='vat']" position="after">
+                    <field name="skill_ids" widget="many2many_tags"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

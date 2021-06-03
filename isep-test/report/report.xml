@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<odoo>
+	<data>
+		<report 
+			id="report_developer"
+			string="Reporte de Desarrollador"
+			model="isep.report.wizard"
+			report_type="qweb-pdf"
+			name="isep-test.template_report_developer"
+			file="isep-test.template_report_developer"
+			menu="False"
+			print_report_name="'Reporte de Desarrollador'"
+		/>
+
+		<template id="isep-test.template_report_developer" >
+			<t t-call="web.html_container">
+                <t t-call="web.external_layout">
+                    <div class="page" style="font-size:15px">
+                        <h5><t t-esc="developer"></t></h5>
+                        <h5><t t-esc="developer"></t></h5>
+                        <h5><t t-esc="developer"></t></h5>
+                        <h5><t t-esc="developer"></t></h5>
+                        <h5><t t-esc="developer"></t></h5>
+                        <h5><t t-esc="developer"></t></h5>
+                        <h5><t t-esc="developer"></t></h5>
+                    </div>
+                </t>
+			</t>
+		</template>
+
+	</data>
+
+</odoo>

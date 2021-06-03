@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<odoo>
+
+    <record id="wizard_report_views" model="ir.ui.view">
+        <field name="name">Reporte Form</field>
+        <field name="model">isep.report.wizard</field>
+        <field name="arch" type="xml">
+            <form>
+                <field name="developer"/>
+                <footer>
+                    <div class="text-center">
+                        <button name="print_pdf" string="Bucar" type="object"/>
+                    </div>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_wizard_report_views" model="ir.actions.act_window">
+        <field name="name">Report</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">isep.report.wizard</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+
+    <menuitem id="menu_wizard_report" name="Reportes" action="action_wizard_report_views" parent="isep-test_menu_root" />
+
+</odoo>
