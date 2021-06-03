@@ -16,13 +16,44 @@
 			<t t-call="web.html_container">
                 <t t-call="web.external_layout">
                     <div class="page" style="font-size:15px">
-                        <h5><t t-esc="developer"></t></h5>
-                        <h5><t t-esc="developer"></t></h5>
-                        <h5><t t-esc="developer"></t></h5>
-                        <h5><t t-esc="developer"></t></h5>
-                        <h5><t t-esc="developer"></t></h5>
-                        <h5><t t-esc="developer"></t></h5>
-                        <h5><t t-esc="developer"></t></h5>
+						<div class="row">
+							<div class="col-8">
+								<div class="border border-dark">
+									<h5>ID: <t t-esc="developer"></t></h5>
+									<h5>Contacto: <t t-esc="partner_id"></t></h5>
+									<h5>Nombre identificador: <t t-esc="name"></t></h5>
+								</div>
+								<table class="table mt16 border border-dark">
+									<thead style="font-size: 12px" class="text-dark" >
+										<tr class="text-dark text-center">
+											<div class="container">
+												<div class="row">
+													<th scope="col-sm">Lenguaje</th>
+												</div>
+											</div>
+										</tr>
+									</thead>
+									<tbody class="text-center">
+										<t t-foreach="skills" t-as="record">
+											<tr style="font-size: 12px">
+												<th>
+													<t t-esc="record"/>
+												</th>
+											</tr>
+										</t>
+									</tbody>
+
+								</table>
+							</div>
+
+							<div class="col-4 border border-dark p-4">
+								<h5>Años de experiencia: <t t-esc="years"></t></h5>
+								<h5>habilidad: <t t-esc="percent"></t>%</h5>
+								<h5>Pertenece a: <t t-esc="company_id_name"></t></h5>
+								<h5>Edad: <t t-esc="age"></t></h5>
+								<h5>Estudiante: <t t-esc="student"></t></h5>
+							</div>
+						</div>
                     </div>
                 </t>
 			</t>

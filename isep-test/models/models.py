@@ -4,6 +4,16 @@ from odoo.exceptions import UserError
 class developer(models.Model):
     _name = 'isep.developer'
 
+    @api.multi
+    def unlink(self):
+        for record in self:
+            res_partner = self.env['res.partner'].search([('id', '=', self.partner_id.id)])
+            if record.skill_id:
+                res_partner.write({
+                    'skill_ids':[(6, 0, [])]
+                })
+        return super(developer, self).unlink()
+
     @api.onchange('partner_id','skill_id','percent')
     def _compute_complete_name(self):
         for content in self:
@@ -16,6 +26,8 @@ class developer(models.Model):
     years = fields.Integer(string='Year',required=True, default=1)
     percent = fields.Float(string='percent',required=True)
     company_id = fields.Many2one('res.company', string='company',required=True)
+    age = fields.Integer(string="age", required=True)
+    student = fields.Boolean(string="student", default=False)
 
     @api.constrains('percent','partner_id')
     def _generate_code(self):

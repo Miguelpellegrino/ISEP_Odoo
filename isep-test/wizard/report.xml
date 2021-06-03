@@ -6,7 +6,7 @@
         <field name="model">isep.report.wizard</field>
         <field name="arch" type="xml">
             <form>
-                <field name="developer"/>
+                <field name="developer_id"/>
                 <footer>
                     <div class="text-center">
                         <button name="print_pdf" string="Bucar" type="object"/>

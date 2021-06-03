@@ -23,6 +23,8 @@
                     <group class="col-6">
                         <field name="partner_id"/>
                         <field name="company_id"/>
+                        <field name="age"/>
+                        <field name="student"/>
                         <field name="name" force_save="1"/>
                     </group>
 
